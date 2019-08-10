@@ -1,2 +1,6 @@
-/Users/mellome1992/Desktop/sprintboot-demo/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/HelloSpringbootController.java
-/Users/mellome1992/Desktop/sprintboot-demo/src/main/java/com/yifeng/springboot/sprintbootdemo/SprintbootDemoApplication.java
+/Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/entity/User.java
+/Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/JdbcController.java
+/Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/dao/UserDao.java
+/Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/MyBatisController.java
+/Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/SprintbootDemoApplication.java
+/Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/HelloSpringBootController.java
