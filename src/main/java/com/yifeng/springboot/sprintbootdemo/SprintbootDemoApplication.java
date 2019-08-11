@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SprintbootDemoApplication {
 
     public static void main(String[] args) {
-        System.out.println("启动 Spring Boot...");
+        System.out.println("starting Spring Boot...");
         SpringApplication.run(SprintbootDemoApplication.class, args);
     }
 
