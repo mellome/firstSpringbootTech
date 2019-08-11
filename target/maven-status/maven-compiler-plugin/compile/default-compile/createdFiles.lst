@@ -1,4 +1,5 @@
 com/yifeng/springboot/sprintbootdemo/controller/HelloSpringBootController.class
+com/yifeng/springboot/sprintbootdemo/controller/RequestTestController.class
 com/yifeng/springboot/sprintbootdemo/controller/UploadController.class
 com/yifeng/springboot/sprintbootdemo/controller/MyBatisController.class
 com/yifeng/springboot/sprintbootdemo/dao/UserDao.class
