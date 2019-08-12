@@ -4,6 +4,7 @@ com/yifeng/springboot/sprintbootdemo/controller/UploadController.class
 com/yifeng/springboot/sprintbootdemo/controller/MyBatisController.class
 com/yifeng/springboot/sprintbootdemo/dao/UserDao.class
 com/yifeng/springboot/sprintbootdemo/controller/JdbcController.class
+com/yifeng/springboot/sprintbootdemo/controller/HelloController.class
 com/yifeng/springboot/sprintbootdemo/entity/User.class
 com/yifeng/springboot/sprintbootdemo/SprintbootDemoApplication.class
 com/yifeng/springboot/sprintbootdemo/config/SpringBootWebMvcConfigurer.class
