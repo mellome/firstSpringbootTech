@@ -14,11 +14,13 @@ public class HelloController {
         return "hell";
     }
 
+    // 静态文件响应
     @RequestMapping("/helloThere1")
     public String template1(){
         return "helloThere";
     }
 
+    // 直接响应，非静态文件
     @RequestMapping("/helloThere2")
     @ResponseBody
     public String template2(){

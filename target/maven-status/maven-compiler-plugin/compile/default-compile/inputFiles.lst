@@ -1,10 +1,13 @@
+/Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/ApiController.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/config/SpringBootWebMvcConfigurer.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/entity/User.java
-/Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/UploadController.java
+/Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/common/Result.java
+/Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/common/Constants.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/HelloController.java
-/Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/JdbcController.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/dao/UserDao.java
+/Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/UploadController.java
+/Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/common/ResultGenerator.java
+/Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/JdbcController.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/MyBatisController.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/SprintbootDemoApplication.java
-/Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/HelloSpringBootController.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/RequestTestController.java

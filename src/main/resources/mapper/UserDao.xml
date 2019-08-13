@@ -17,6 +17,11 @@
         order by id desc
     </select>
 
+    <select id="getUserById" resultMap="UserResult">
+        select id,name,password from tb_user
+        where id = #{id}
+    </select>
+
     <insert id="insertUser" parameterType="com.yifeng.springboot.sprintbootdemo.entity.User" >
         insert into tb_user(name, password)
         values(#{name}, #{password})

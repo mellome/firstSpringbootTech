@@ -19,6 +19,15 @@ public interface UserDao {
 
 
     /**
+     * 根据主键查询
+     *
+     * @param id
+     * @return
+     */
+    User getUserById(Integer id);
+
+
+    /**
      * @Description:添加
      * @param user
      * @return

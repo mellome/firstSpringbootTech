@@ -22,12 +22,14 @@ public class UploadController {
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     @ResponseBody
-    public String upload(@RequestParam("file") MultipartFile file) {
+    public String upload(@RequestParam("file1") MultipartFile file) {
+        // @RequestParam("file1") 用来获取前端上传请求name为file1的文件, 然后复制给当前parameter "file"
         if (file.isEmpty()) {
             return "upload failed";
         }
         String fileName = file.getOriginalFilename();
         String suffixName = fileName.substring(fileName.lastIndexOf("."));
+
         //生成文件名称通用方法
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
         Random r = new Random();

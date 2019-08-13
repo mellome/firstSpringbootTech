@@ -5,20 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ajax test</title>
 
-    <!-- 引入jQuery -->
+    <!-- 通过 CDN（内容分发网络引用jQuery）-->
     <script src="https://cdn.staticfile.org/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- 基础语法是：$(selector).action()
+         美元符号定义 jQuery
+         选择符（selector）“查询”和“查找” HTML 元素
+         jQuery 的 action() 执行对元素的操作
+    -->
 
     <!-- 定义两个点击事件并实现 Ajax 调用逻辑 -->
     <script type="text/javascript">
 
         function requestTest1() {
+
+            <!-- val() 方法返回或设置被选元素的值 -->
             var info = $("#info").val();
+
+            <!-- ajax() 方法通过 HTTP 请求加载远程数据，执行异步 HTTP (Ajax) 请求 -->
             $.ajax({
                 type: "GET",//方法类型
                 dataType: "text",//预期服务器返回的数据类型
-                url: "api/test1?info=" + info,//请求地址
+                url: "api/test1?info=" + info,//请求地址，此处的 info 是 RequestTestController 里的 parameter
                 contentType: "application/json; charset=utf-8",
                 success: function (result) {//请求成功后回调
+
+                    //$("#test1")针对所有id为"test1"的元素，.html()设置或返回被选元素的内容
+                    // JSON.stringify() 方法将 JavaScript 对象转换为字符串
                     $("#test1").html(JSON.stringify(result));
                 },
                 error: function () {//请求失败后回调
@@ -55,10 +68,12 @@
                             <h5 class="m-0">interface test1</h5>
                         </div>
                         <div class="card-body">
-                            <input type="text" id="info" class="form-control" placeholder="请输入info值">
+                            <input type="text" id="info" class="form-control" placeholder="Please enter your info">
                             <h6 class="card-title">responses of interface1 are as followings：</h6>
+
                             <p class="card-text" id="test1"></p>
                             <a href="#" class="btn btn-primary" onclick="requestTest1()">send request1</a>
+
                         </div>
                     </div>
                     <br>
@@ -68,8 +83,10 @@
                         </div>
                         <div class="card-body">
                             <h6 class="card-title">responses of interface2 are as followings：</h6>
+
                             <p class="card-text" id="test2"></p>
                             <a href="#" class="btn btn-primary" onclick="requestTest2()">send request2</a>
+
                         </div>
                     </div>
                 </div>

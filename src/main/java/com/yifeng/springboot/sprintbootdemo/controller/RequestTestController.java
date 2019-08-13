@@ -13,13 +13,22 @@ import java.util.List;
 @RequestMapping("/api")
 public class RequestTestController {
 
+    static List<String> list = new ArrayList<>();
+    static{
+        list.add("123");
+        list.add("321");
+        list.add("666");
+    }
+
     @RequestMapping(value = "/test1", method = RequestMethod.GET)
     public String test1(String info) {
 
         if ( StringUtils.isEmpty(info) ) {
             return "please enter value of info！";
         }
-        return "your enter is:" + info;
+
+        return list.contains(info)? "Ja, Ihre Eingabe ist drin":"Leider, Ihre Eingabe ist nicht drin";
+
     }
 
     @RequestMapping(value = "/test2", method = RequestMethod.GET)
