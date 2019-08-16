@@ -19,8 +19,8 @@
                 dataType: "json",//预期服务器返回的数据类型
                 url: "/api/users/" + id,
                 contentType: "application/json; charset=utf-8",
-                success: function (re) {
-                    $("#result0").html(JSON.stringify(re));
+                success: function (result) {
+                    $("#result0").html(JSON.stringify(result));
                 },
                 error: function () {
                     $("#result0").html("接口异常，请联系管理员！");
