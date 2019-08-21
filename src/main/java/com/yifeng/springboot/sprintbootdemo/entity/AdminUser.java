@@ -5,6 +5,16 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * @Description: 接口 Serializable 便于实现类的序列化
+ * 1. 达到一种持久化保持数据的过程
+ * 2. 将对象转换成字节，便于网络传输
+ * 3. 序列化后的数据还原需要进行反序列化恢复，体现了数据的安全性
+ *
+ * 接口 Serializable 是一个空接口， 无须重写任何实现类
+ * 序列化不保存静态变量
+ */
+
 public class AdminUser implements Serializable {
 
     /**
@@ -33,7 +43,7 @@ public class AdminUser implements Serializable {
     private int isDeleted;
 
     /**
-     * 添加时间
+     * 添加时间，用于保存最新的时间
      */
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date createTime;

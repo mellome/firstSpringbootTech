@@ -12,7 +12,7 @@ import java.util.Map;
 @RestController
 public class JdbcController {
 
-    // @Autowired的使用来消除 set ，get方法
+    // @Autowired通过'byType'的方式来装载某种class类型的bean
     @Autowired
     JdbcTemplate jdbcTemplate;
 

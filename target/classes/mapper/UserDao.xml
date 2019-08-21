@@ -17,6 +17,7 @@
         order by id desc
     </select>
 
+    <!-- #{} 是一个占位符, 用来传递输入的参数 -->
     <select id="getUserById" resultMap="UserResult">
         select id,name,password from tb_user
         where id = #{id}
@@ -24,7 +25,7 @@
 
     <insert id="insertUser" parameterType="com.yifeng.springboot.sprintbootdemo.entity.User" >
         insert into tb_user(name, password)
-        values(#{name}, #{password})
+        values( #{name}, #{password} )
     </insert>
 
     <update id="updUser" parameterType="com.yifeng.springboot.sprintbootdemo.entity.User">
@@ -36,7 +37,7 @@
     <delete id="delUser" parameterType="int">
         delete
         from tb_user
-        where id=#{id}
+        where id = #{id}
     </delete>
 
 

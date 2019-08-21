@@ -1,6 +1,8 @@
 package com.yifeng.springboot.sprintbootdemo.service;
 
 import com.yifeng.springboot.sprintbootdemo.entity.AdminUser;
+import com.yifeng.springboot.sprintbootdemo.utils.PageResult;
+import com.yifeng.springboot.sprintbootdemo.utils.PageUtil;
 
 public interface AdminUserService {
     /**
@@ -9,4 +11,6 @@ public interface AdminUserService {
      * @return
      */
     AdminUser updateTokenAndLogin(String userName, String password);
+
+    PageResult getAdminUserPage(PageUtil pageUtil);
 }

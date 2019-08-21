@@ -1,12 +1,12 @@
 package com.yifeng.springboot.sprintbootdemo.dao;
 
 import com.yifeng.springboot.sprintbootdemo.entity.User;
+
 import java.util.List;
-import java.util.Map;
 
 
 /**
- * @Description:CRUD操作
+ * @Description:CRUD_Operations
  */
 
 public interface UserDao {

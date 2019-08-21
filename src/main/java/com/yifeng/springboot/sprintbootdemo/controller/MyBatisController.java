@@ -56,5 +56,13 @@ public class MyBatisController {
         return userDao.delUser(id)>0;
     }
 
+    @GetMapping("/users/mybatis/getUserById")
+    public User getUserById(Integer id){
+        if( StringUtils.isEmpty(id) || id < 1){
+            return null;
+        }
+        return userDao.getUserById(id);
+    }
+
 
 }

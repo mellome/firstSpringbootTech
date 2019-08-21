@@ -61,22 +61,24 @@ function validPassword(password) {
 function login() {
     var userName = $("#userName").val();
     var password = $("#password").val();
+
     if (isNull(userName)) {
-        showErrorInfo("请输入用户名!");
+        showErrorInfo("please enter your username!");
         return;
     }
     if (!validUserName(userName)) {
-        showErrorInfo("请输入正确的用户名!");
+        showErrorInfo("please enter the correct username!");
         return;
     }
     if (isNull(password)) {
-        showErrorInfo("请输入密码!");
+        showErrorInfo("please enter your password!");
         return;
     }
     if (!validPassword(password)) {
-        showErrorInfo("请输入正确的密码!");
+        showErrorInfo("please enter the correct password!");
         return;
     }
+
     var data = {"userName": userName, "password": password}
     $.ajax({
         type: "POST",//方法类型
@@ -92,13 +94,13 @@ function login() {
             }
             ;
             if (result.resultCode == 500) {
-                showErrorInfo("登陆失败!请检查账号和密码！");
+                showErrorInfo("login failed! please check your username and password！");
                 return;
             }
         },
         error: function () {
             $('.alert-danger').css("display", "none");
-            showErrorInfo("接口异常，请联系管理员！");
+            showErrorInfo("interface exception，please contact the admin！");
             return;
         }
     });

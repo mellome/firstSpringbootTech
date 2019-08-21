@@ -2,6 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.yifeng.springboot.sprintbootdemo.dao.AdminUserDao">
+
     <resultMap type="com.yifeng.springboot.sprintbootdemo.entity.AdminUser" id="AdminUserResult">
         <id property="id" column="id" jdbcType="BIGINT"/>
         <result property="userName" column="user_name" jdbcType="VARCHAR"/>
@@ -12,17 +13,18 @@
     </resultMap>
 
     <insert id="addUser" parameterType="com.yifeng.springboot.sprintbootdemo.entity.AdminUser">
-        insert into tb_admin_user(user_name,password_md5)
-        values(#{userName},#{password})
+        insert into tb_admin_user( user_name, password_md5 )
+        values( #{userName}, #{password} )
     </insert>
 
     <insert id="insertUsersBatch">
-        insert into tb_admin_user(user_name,password_md5) VALUES
+        insert into tb_admin_user( user_name, password_md5 ) VALUES
         <foreach collection="adminUsers" index="index" item="adminUser" open="" separator="," close="">
             (#{adminUser.userName}, #{adminUser.password})
         </foreach>
     </insert>
 
+    <!-- 查询用户列表 limited between 'start' and 'limit' -->
     <select id="findAdminUsers" parameterType="Map" resultMap="AdminUserResult">
         select id,user_name,create_time from tb_admin_user
         where is_deleted=0
@@ -32,6 +34,7 @@
         </if>
     </select>
 
+    <!-- 查询用户总数（不分页） -->
     <select id="getTotalAdminUser" parameterType="Map" resultType="int">
         select count(*) from tb_admin_user
         where is_deleted=0

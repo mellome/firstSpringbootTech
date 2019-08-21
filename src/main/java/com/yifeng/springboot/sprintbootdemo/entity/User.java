@@ -1,5 +1,8 @@
 package com.yifeng.springboot.sprintbootdemo.entity;
 
+/**
+ * @Description: entity文件夹下的文件用来被映射数据库中的字段
+ */
 public class User {
 
     private Integer id;
