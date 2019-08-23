@@ -7,7 +7,6 @@ import com.yifeng.springboot.sprintbootdemo.entity.AdminUser;
 import com.yifeng.springboot.sprintbootdemo.service.AdminUserService;
 import com.yifeng.springboot.sprintbootdemo.utils.PageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -49,17 +48,69 @@ public class AdminUserController {
     }
 
     /**
-     * 用来处理前端请求的用户参数
+     * 使用 @RequestBody 将前端传过来的参数封装为 AdminUser 对象，之后判断参数是否符合规范，并检查是否已经存在相同用户，如果所有参数校验都成功通过，则调用 save() 方法进行实际的入库操作
+     * 用来处理前端请求的用户参数, 添加新的 user 信息
      * @param user
      * @return
      */
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public Result save(@RequestBody AdminUser user){
+
+        //检查前端请求的user是否具备基本信息
         if(StringUtils.isEmpty(user.getUserName())||StringUtils.isEmpty(user.getPassword())){
             return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR,"parameter exception！");
         }
-        AdminUser tempUser = adminUserService.
+
+        //尝试从 DB 获取相应的 user 资料
+        AdminUser tempUser = adminUserService.selectByUserName(user.getUserName());
+
+        if(tempUser != null){
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "user already exists in DB, do not repeat to add! ");
+        }
+
+        /**
+         *  trim() 去掉字符串首尾空格
+         *  endsWith() 测试字符串是否以指定的后缀结束
+         */
+        if("admin".endsWith(user.getUserName().trim())){
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR,"can't add admin in DB!");
+        }
+
+        if(adminUserService.save(user) > 0){
+            return ResultGenerator.genSuccessResult();
+        }else{
+            return ResultGenerator.genFailResult("add failed");
+        }
+
     }
 
+    /**
+     * @param user
+     * @return
+     */
+    @RequestMapping(value = "/updatePassword", method = RequestMethod.PUT)
+    public Result update(@RequestBody AdminUser user){
 
+        //检查前端请求的user是否带有新的密码
+        if(StringUtils.isEmpty(user.getPassword())){
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR,"please enter the password! ");
+        }
+
+        AdminUser tempUser = adminUserService.selectById(user.getId());
+
+        if(tempUser == null){
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "user doesn't exist! ");
+        }
+        if("admin".endsWith(user.getUserName().trim())){
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR,"can not modify admin user! ");
+        }
+
+        tempUser.setPassword(user.getPassword());
+        if(adminUserService.save(user) > 0){
+            return ResultGenerator.genSuccessResult();
+        }else{
+            return ResultGenerator.genFailResult("password update failed! ");
+        }
+
+    }
 }
