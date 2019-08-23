@@ -161,6 +161,15 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
+                            <!-- Angular Modal -->
+                            <div class="grid-btn">
+                                <button class="btn btn-info" onclick="userAdd()">
+                                    <i class="fa fa-plus"></i>&nbsp;add
+                                </button>
+                                <button class="btn btn-warning" onclick="userEdit()">
+                                    <i class="fa fa-edit"></i>&nbsp;edit
+                                </button>
+                            </div>
                             <table id="jqGrid" class="table table-bordered">
                             </table>
                             <div id="jqGridPager"></div>
@@ -170,6 +179,76 @@
             </div>
         </div>
     </div>
+
+    <div class="content">
+        <!-- modalAdd -->
+        <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h6 class="modal-title" id="modalAddTitle">add user</h6>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <div class="alert alert-danger add-error-info">Error message display</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="userName" class="control-label">username:</label>
+                                <input type="text" class="form-control" id="userName">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="control-label">password:</label>
+                                <input type="text" class="form-control" id="password">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
+                        <button type="button" class="btn btn-primary" id="saveButton">confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal -->
+    </div>
+
+
+    <div class="content">
+        <!-- modalEdit -->
+        <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="modalEditLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h6 class="modal-title" id="modalEditTitle">password edit</h6>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <input type="hidden" id="userId" value="0">
+                            <div class="form-group">
+                                <div class="alert alert-danger edit-error-info">Error message display</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="passwordEdit" class="control-label">new password:</label>
+                                <input type="text" class="form-control" id="passwordEdit">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
+                        <button type="button" class="btn btn-primary" id="editButton">confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal -->
+    </div>
+
+
     <!-- /.content-wrapper -->
     <footer class="main-footer">
         <strong>Copyright &copy; 2019 <a href="##">13blog.site</a>.</strong>

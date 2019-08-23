@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cab70375-3b5e-43cb-a646-0359a000d571" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/AdminUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/AdminUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/service/AdminUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/service/AdminUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/service/impl/AdminUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/service/impl/AdminUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yifeng/springboot/sprintbootdemo/controller/AdminUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yifeng/springboot/sprintbootdemo/controller/AdminUserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yifeng/springboot/sprintbootdemo/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yifeng/springboot/sprintbootdemo/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yifeng/springboot/sprintbootdemo/service/AdminUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yifeng/springboot/sprintbootdemo/service/AdminUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yifeng/springboot/sprintbootdemo/service/impl/AdminUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yifeng/springboot/sprintbootdemo/service/impl/AdminUserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/user.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/AdminUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1192">
-              <caret line="101" column="40" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
+            <state relative-caret-position="270">
+              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="19" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,13 +66,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/user.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="793">
-              <caret line="154" column="44" lean-forward="true" selection-start-line="154" selection-start-column="44" selection-end-line="154" selection-end-column="44" />
+            <state relative-caret-position="537">
+              <caret line="242" column="93" selection-start-line="242" selection-start-column="93" selection-end-line="242" selection-end-column="93" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#7610#7616#0" expanded="true" />
+                <element signature="e#7810#7816#0" expanded="true" />
+                <element signature="e#8675#8682#1" expanded="true" />
+                <element signature="e#10520#10527#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,11 +143,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/utils/MD5Util.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/api-test.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/dist/js/user.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/user.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/service/AdminUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/service/impl/AdminUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/AdminUserController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/user.html" />
       </list>
     </option>
   </component>
@@ -287,14 +285,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sprintboot-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="firstSpringbootTech" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -305,16 +295,6 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sprintboot-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="firstSpringbootTech" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -386,15 +366,16 @@
       <workItem from="1565810490734" duration="169000" />
       <workItem from="1565811382921" duration="320000" />
       <workItem from="1565856596620" duration="11311000" />
-      <workItem from="1566154961181" duration="35825000" />
+      <workItem from="1566154961181" duration="36961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80536000" />
+    <option name="totallyTimeSpent" value="81672000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="902" y="0" width="1018" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -402,9 +383,9 @@
       <window_info id="Favorites" order="3" sideWeight="0.50547945" side_tool="true" weight="0.50888324" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49452055" weight="0.3567625" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49452055" weight="0.289959" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.22871287" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.22871287" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
@@ -862,22 +843,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/user.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/AdminUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="154" column="44" lean-forward="true" selection-start-line="154" selection-start-column="44" selection-end-line="154" selection-end-column="44" />
+        <state relative-caret-position="270">
+          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="19" selection-end-column="46" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/AdminUserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1192">
-          <caret line="101" column="40" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
+        <state relative-caret-position="537">
+          <caret line="242" column="93" selection-start-line="242" selection-start-column="93" selection-end-line="242" selection-end-column="93" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#7610#7616#0" expanded="true" />
+            <element signature="e#7810#7816#0" expanded="true" />
+            <element signature="e#8675#8682#1" expanded="true" />
+            <element signature="e#10520#10527#1" expanded="true" />
           </folding>
         </state>
       </provider>
