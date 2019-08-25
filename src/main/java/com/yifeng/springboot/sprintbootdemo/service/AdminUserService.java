@@ -15,6 +15,13 @@ public interface AdminUserService {
     PageResult getAdminUserPage(PageUtil pageUtil);
 
     /**
+     * 根据用户Token来获取用户
+     * @param userToken
+     * @return
+     */
+    AdminUser getAdminUserByToken(String userToken);
+
+    /**
      * 登陆功能
      *
      * @return
@@ -50,7 +57,7 @@ public interface AdminUserService {
     int updatePassword(AdminUser user);
 
     /**
-     * 删除用户及其信息
+     * 批量删除功能
      */
     int deleteBatch(Integer[] ids);
 }

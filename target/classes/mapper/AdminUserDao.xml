@@ -80,6 +80,7 @@
         update tb_admin_user set password_md5 = #{newPassword},user_token ='' where id =#{userId} and is_deleted = 0
     </update>
 
+    <!-- 批量删除功能 -->
     <update id="deleteBatch">
         update tb_admin_user
         set is_deleted=1 where id in

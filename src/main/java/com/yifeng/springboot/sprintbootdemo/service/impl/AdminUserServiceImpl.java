@@ -48,6 +48,11 @@ public class AdminUserServiceImpl implements AdminUserService {
         return pageResult;
     }
 
+    @Override
+    public AdminUser getAdminUserByToken(String userToken) {
+        return adminUserDao.getAdminUserByToken(userToken);
+    }
+
     /**
      * 获取token值
      *

@@ -3,6 +3,7 @@ package com.yifeng.springboot.sprintbootdemo.controller;
 import com.yifeng.springboot.sprintbootdemo.common.Constants;
 import com.yifeng.springboot.sprintbootdemo.common.Result;
 import com.yifeng.springboot.sprintbootdemo.common.ResultGenerator;
+import com.yifeng.springboot.sprintbootdemo.config.annotation.TokenToUser;
 import com.yifeng.springboot.sprintbootdemo.entity.AdminUser;
 import com.yifeng.springboot.sprintbootdemo.service.AdminUserService;
 import com.yifeng.springboot.sprintbootdemo.utils.PageUtil;
@@ -54,7 +55,7 @@ public class AdminUserControler {
      * @return
      */
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public Result save(@RequestBody AdminUser user) {
+    public Result save(@RequestBody AdminUser user, @TokenToUser AdminUser loginUser) {
 
         //检查前端请求的user是否具备基本信息
         if (StringUtils.isEmpty(user.getUserName()) || StringUtils.isEmpty(user.getPassword())) {
@@ -89,7 +90,7 @@ public class AdminUserControler {
      * @return
      */
     @RequestMapping(value = "/updatePassword", method = RequestMethod.PUT)
-    public Result update(@RequestBody AdminUser user) {
+    public Result update(@RequestBody AdminUser user, @TokenToUser AdminUser loginUser) {
         if (StringUtils.isEmpty(user.getPassword())) {
             return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "please enter the password!");
         }
@@ -112,10 +113,12 @@ public class AdminUserControler {
      * 删除
      */
     @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
-    public Result delete(@RequestBody Integer[] ids) {
+    public Result delete(@RequestBody Integer[] ids, @TokenToUser AdminUser loginUser) {
+
         if (ids.length < 1) {
             return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "参数异常！");
         }
+
         if (adminUserService.deleteBatch(ids) > 0) {
             return ResultGenerator.genSuccessResult();
         } else {

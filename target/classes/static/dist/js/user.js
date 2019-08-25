@@ -94,6 +94,10 @@ function userDel() {
                 url: "users/delete",
                 contentType: "application/json",
                 data: JSON.stringify(ids),
+                beforeSend: function (request) {
+                    //设置header值
+                    request.setRequestHeader("token", getCookie("token"));
+                },
                 success: function (r) {
                     checkResultCode(r.resultCode);
                     if (r.resultCode == 200) {
@@ -128,6 +132,10 @@ $('#saveButton').click(function () {
             url: 'users/save',//url
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(data),
+            beforeSend: function (request) {
+                //设置header值
+                request.setRequestHeader("token", getCookie("token"));
+            },
             success: function (result) {
                 console.log(result);//打印服务端返回的数据
                 checkResultCode(result.resultCode);
@@ -171,6 +179,10 @@ $('#editButton').click(function () {
             url: 'users/updatePassword',//url
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(data),
+            beforeSend: function(request){
+                // 设置header的值
+                request.setRequestHeader("token", getCookie("token"));
+            },
             success: function (result) {
                 checkResultCode(result.resultCode);
                 console.log(result);//打印服务端返回的数据
