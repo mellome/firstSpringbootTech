@@ -3,12 +3,16 @@ com/yifeng/springboot/sprintbootdemo/service/AdminUserService.class
 com/yifeng/springboot/sprintbootdemo/utils/DateUtil.class
 com/yifeng/springboot/sprintbootdemo/utils/PageUtil.class
 com/yifeng/springboot/sprintbootdemo/controller/MyBatisController.class
+com/yifeng/springboot/sprintbootdemo/controller/PictureController.class
 com/yifeng/springboot/sprintbootdemo/service/impl/AdminUserServiceImpl.class
 com/yifeng/springboot/sprintbootdemo/controller/JdbcController.class
 com/yifeng/springboot/sprintbootdemo/common/ResultGenerator.class
+com/yifeng/springboot/sprintbootdemo/service/impl/PictureServiceImpl.class
 com/yifeng/springboot/sprintbootdemo/utils/PageResult.class
+com/yifeng/springboot/sprintbootdemo/entity/Picture.class
 com/yifeng/springboot/sprintbootdemo/dao/UserDao.class
 com/yifeng/springboot/sprintbootdemo/utils/NumberUtil.class
+com/yifeng/springboot/sprintbootdemo/service/PictureService.class
 com/yifeng/springboot/sprintbootdemo/config/annotation/TokenToUser.class
 com/yifeng/springboot/sprintbootdemo/controller/AdminUserControler.class
 com/yifeng/springboot/sprintbootdemo/SprintbootDemoApplication.class
@@ -21,6 +25,7 @@ com/yifeng/springboot/sprintbootdemo/controller/HelloController.class
 com/yifeng/springboot/sprintbootdemo/controller/ApiController.class
 com/yifeng/springboot/sprintbootdemo/config/SpringBootWebMvcConfigurer.class
 com/yifeng/springboot/sprintbootdemo/entity/AdminUser.class
+com/yifeng/springboot/sprintbootdemo/dao/PictureDao.class
 com/yifeng/springboot/sprintbootdemo/controller/UploadController.class
 com/yifeng/springboot/sprintbootdemo/entity/User.class
 com/yifeng/springboot/sprintbootdemo/utils/MD5Util.class

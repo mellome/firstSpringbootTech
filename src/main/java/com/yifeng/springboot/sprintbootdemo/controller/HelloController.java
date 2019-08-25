@@ -3,8 +3,11 @@ package com.yifeng.springboot.sprintbootdemo.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 返回页面使用 @Controller + @ResponseBody 在特定页面文件
+ * 其他情况使用 @RestController 会直接返回数据
+ */
 @Controller
 @RequestMapping("/staticResource")
 public class HelloController {
