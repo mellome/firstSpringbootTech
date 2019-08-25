@@ -9,7 +9,7 @@ com/yifeng/springboot/sprintbootdemo/common/ResultGenerator.class
 com/yifeng/springboot/sprintbootdemo/utils/PageResult.class
 com/yifeng/springboot/sprintbootdemo/dao/UserDao.class
 com/yifeng/springboot/sprintbootdemo/utils/NumberUtil.class
-com/yifeng/springboot/sprintbootdemo/controller/AdminUserController.class
+com/yifeng/springboot/sprintbootdemo/controller/AdminUserControler.class
 com/yifeng/springboot/sprintbootdemo/SprintbootDemoApplication.class
 com/yifeng/springboot/sprintbootdemo/common/Constants.class
 com/yifeng/springboot/sprintbootdemo/utils/SystemUtil.class

@@ -14,7 +14,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/users")
-public class AdminUserController {
+public class AdminUserControler {
 
     @Autowired
     private AdminUserService adminUserService;
@@ -54,63 +54,58 @@ public class AdminUserController {
      * @return
      */
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public Result save(@RequestBody AdminUser user){
+    public Result save(@RequestBody AdminUser user) {
 
         //检查前端请求的user是否具备基本信息
-        if(StringUtils.isEmpty(user.getUserName())||StringUtils.isEmpty(user.getPassword())){
-            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR,"parameter exception！");
+        if (StringUtils.isEmpty(user.getUserName()) || StringUtils.isEmpty(user.getPassword())) {
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "parameter exception！");
         }
 
         //尝试从 DB 获取相应的 user 资料
         AdminUser tempUser = adminUserService.selectByUserName(user.getUserName());
 
-        if(tempUser != null){
-            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "user already exists in DB, do not repeat to add! ");
+        if (tempUser != null) {
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "user already exists in DB, do not repeat to add!");
         }
 
         /**
          *  trim() 去掉字符串首尾空格
          *  endsWith() 测试字符串是否以指定的后缀结束
          */
-        if("admin".endsWith(user.getUserName().trim())){
-            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR,"can't add admin in DB!");
-        }
 
-        if(adminUserService.save(user) > 0){
+        if ("admin".endsWith(user.getUserName().trim())) {
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "can't add admin in DB!");
+        }
+        if (adminUserService.save(user) > 0) {
             return ResultGenerator.genSuccessResult();
-        }else{
+        } else {
             return ResultGenerator.genFailResult("add failed");
         }
-
     }
+
 
     /**
      * @param user
      * @return
      */
     @RequestMapping(value = "/updatePassword", method = RequestMethod.PUT)
-    public Result update(@RequestBody AdminUser user){
-
-        //检查前端请求的user是否带有新的密码
-        if(StringUtils.isEmpty(user.getPassword())){
-            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR,"please enter the password! ");
+    public Result update(@RequestBody AdminUser user) {
+        if (StringUtils.isEmpty(user.getPassword())) {
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "please enter the password!");
         }
-
         AdminUser tempUser = adminUserService.selectById(user.getId());
-
-        if(tempUser == null){
+        if (tempUser == null) {
             return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "user doesn't exist! ");
         }
-        if("admin".endsWith(user.getUserName().trim())){
-            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR,"can not modify admin user! ");
+        if ("admin".endsWith(tempUser.getUserName().trim())) {
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "can not modify admin user!");
         }
-
         tempUser.setPassword(user.getPassword());
-        if(adminUserService.save(user) > 0){
+        if (adminUserService.updatePassword(user) > 0) {
             return ResultGenerator.genSuccessResult();
-        }else{
-            return ResultGenerator.genFailResult("password update failed! ");
+        } else {
+            return ResultGenerator.genFailResult("password update failed!");
         }
-
     }
+
 }

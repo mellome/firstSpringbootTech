@@ -5,13 +5,13 @@
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/utils/NumberUtil.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/common/Result.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/common/Constants.java
+/Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/AdminUserControler.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/service/impl/AdminUserServiceImpl.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/utils/SystemUtil.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/HelloController.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/dao/UserDao.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/utils/DateUtil.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/utils/MD5Util.java
-/Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/AdminUserController.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/entity/AdminUser.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/utils/PageUtil.java
 /Users/mellome1992/LocalRepository/firstSpringbootTech/src/main/java/com/yifeng/springboot/sprintbootdemo/utils/PageResult.java
