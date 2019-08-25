@@ -70,6 +70,49 @@ function userEdit() {
     $('#modalEdit').modal('show');
 }
 
+/**
+ * 用户删除
+ */
+function userDel() {
+    // 1.获取需要删除的所有id
+    var ids = getSelectedRows();
+    if (ids == null) {
+        return;
+    }
+    // 2.弹框确认
+    swal({
+        title: "确认弹框",
+        text: "确认要删除数据吗?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    }).then((flag) => {
+        if(flag) {
+            // 3.发送 Ajax 请求删除数据
+            $.ajax({
+                type: "DELETE",
+                url: "users/delete",
+                contentType: "application/json",
+                data: JSON.stringify(ids),
+                success: function (r) {
+                    checkResultCode(r.resultCode);
+                    if (r.resultCode == 200) {
+                        swal("删除成功", {
+                            icon: "success",
+                        });
+                        $("#jqGrid").trigger("reloadGrid");
+                    } else {
+                        swal(r.message, {
+                            icon: "error",
+                        });
+                    }
+                }
+            });
+        }
+    }
+);
+}
+
 //绑定modal上的保存按钮
 $('#saveButton').click(function () {
     //验证数据

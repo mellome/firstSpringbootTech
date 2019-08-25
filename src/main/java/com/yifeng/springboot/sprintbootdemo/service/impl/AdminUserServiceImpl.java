@@ -81,4 +81,9 @@ public class AdminUserServiceImpl implements AdminUserService {
     public int updatePassword(AdminUser user) {
         return adminUserDao.updateUserPassword(user.getId(), MD5Util.MD5Encode(user.getPassword(),"UTF-8"));
     }
+
+    @Override
+    public int deleteBatch(Integer[] ids) {
+        return adminUserDao.deleteBatch(ids);
+    }
 }

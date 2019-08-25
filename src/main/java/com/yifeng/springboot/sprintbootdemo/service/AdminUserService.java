@@ -48,4 +48,9 @@ public interface AdminUserService {
      * @return
      */
     int updatePassword(AdminUser user);
+
+    /**
+     * 删除用户及其信息
+     */
+    int deleteBatch(Integer[] ids);
 }

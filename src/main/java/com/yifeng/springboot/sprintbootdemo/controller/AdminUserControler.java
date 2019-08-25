@@ -108,4 +108,19 @@ public class AdminUserControler {
         }
     }
 
+    /**
+     * 删除
+     */
+    @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
+    public Result delete(@RequestBody Integer[] ids) {
+        if (ids.length < 1) {
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "参数异常！");
+        }
+        if (adminUserService.deleteBatch(ids) > 0) {
+            return ResultGenerator.genSuccessResult();
+        } else {
+            return ResultGenerator.genFailResult("删除失败");
+        }
+    }
+
 }
