@@ -90,7 +90,7 @@ function login() {
             if (result.resultCode == 200) {
                 $('.alert-danger').css("display", "none");
                 setCookie("token", result.data.userToken);
-                window.location.href = "/";
+                window.location.href = "/index.html";
             }
             ;
             if (result.resultCode == 500) {
