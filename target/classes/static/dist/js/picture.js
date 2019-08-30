@@ -13,15 +13,15 @@ $(function () {
         datatype: "json",
         colModel: [
             {label: 'id', name: 'id', index: 'id', width: 50, sortable: false, hidden: true, key: true},
-            {label: '图片预览', name: 'path', index: 'path', sortable: false, width: 105, formatter: imgFormatter},
-            {label: '图片备注', name: 'remark', index: 'remark', sortable: false, width: 105},
-            {label: '添加时间', name: 'createTime', index: 'createTime', sortable: true, width: 80}
+            {label: 'path', name: 'path', index: 'path', sortable: false, width: 105, formatter: imgFormatter},
+            {label: 'remark', name: 'remark', index: 'remark', sortable: false, width: 105},
+            {label: 'createTime', name: 'createTime', index: 'createTime', sortable: true, width: 80}
         ],
         height: 385,
         rowNum: 10,
         rowList: [10, 30, 50],
         styleUI: 'Bootstrap',
-        loadtext: '信息读取中...',
+        loadtext: 'loading...',
         rownumbers: true,
         rownumWidth: 25,
         autowidth: true,
@@ -115,21 +115,21 @@ $('#saveButton').click(function () {
                 checkResultCode(result.resultCode);
                 if (result.resultCode == 200) {
                     $('#pictureModal').modal('hide');
-                    swal("保存成功", {
+                    swal("saved successfully", {
                         icon: "success",
                     });
                     reload();
                 }
                 else {
                     $('#pictureModal').modal('hide');
-                    swal("保存失败", {
+                    swal("saved failed", {
                         icon: "error",
                     });
                 }
                 ;
             },
             error: function () {
-                swal("操作失败", {
+                swal("operation failed", {
                     icon: "error",
                 });
             }
@@ -140,13 +140,13 @@ $('#saveButton').click(function () {
 
 function pictureAdd() {
     reset();
-    $('.modal-title').html('图片添加');
+    $('.modal-title').html('addPhoto');
     $('#pictureModal').modal('show');
 }
 
 function pictureEdit() {
     reset();
-    $('.modal-title').html('图片编辑');
+    $('.modal-title').html('photoEdit');
 
     var id = getSelectedRow();
     if (id == null) {
@@ -220,7 +220,7 @@ function deletePicture() {
     }
     swal({
         title: "确认弹框",
-        text: "确认要删除数据吗?",
+        text: "are you sure to delete?",
         icon: "warning",
         buttons: true,
         dangerMode: true,
@@ -238,7 +238,7 @@ function deletePicture() {
                 success: function (r) {
                     checkResultCode(r.resultCode);
                     if (r.resultCode == 200) {
-                        swal("删除成功", {
+                        swal("deleted successfully", {
                             icon: "success",
                         });
                         $("#jqGrid").trigger("reloadGrid");

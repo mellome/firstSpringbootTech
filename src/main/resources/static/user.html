@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>lou.springboot | 用户管理页</title>
+    <title>PDMS</title>
     <!-- jqgrid ui -->
     <link href="plugins/jqgrid-5.3.0/ui.jqgrid-bootstrap4.css" rel="stylesheet"/>
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.css">
@@ -39,31 +39,31 @@
             <!-- Messages Dropdown Menu -->
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="https://github.com/ZHENFENG13">
-                    <i class="fa fa-home">&nbsp;&nbsp;文档</i>
+                    <i class="fa fa-home">&nbsp;&nbsp;Doc</i>
                 </a>
                 <div class="dropdown-menu dropdown-donate-lg dropdown-menu-right">
-                    <a href="##" class="dropdown-item">实验楼训练营</a>
+                    <a href="##" class="dropdown-item">tu-dortmund</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user">&nbsp;&nbsp;作者</i>
+                    <i class="fa fa-user">&nbsp;&nbsp;author</i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                     <div class="dropdown-divider"></div>
                     <a href="#" class="dropdown-item">
-                        <i class="fa fa-user-o mr-2"></i> 姓名
-                        <span class="float-right text-muted text-sm">十三 / 13</span>
+                        <i class="fa fa-user-o mr-2"></i> name
+                        <span class="float-right text-muted text-sm">mustermann</span>
                     </a>
                     <div class="dropdown-divider"></div>
                     <a href="#" class="dropdown-item">
-                        <i class="fa fa-user-secret mr-2"></i> 身份
-                        <span class="float-right text-muted text-sm">Java开发工程师</span>
+                        <i class="fa fa-user-secret mr-2"></i> status
+                        <span class="float-right text-muted text-sm">java developer</span>
                     </a>
                     <div class="dropdown-divider"></div>
                     <a href="#" class="dropdown-item">
-                        <i class="fa fa-address-card mr-2"></i> 邮箱
-                        <span class="float-right text-muted text-sm">2449207463@qq.com</span>
+                        <i class="fa fa-address-card mr-2"></i> email
+                        <span class="float-right text-muted text-sm">mustermann@tu-dortmund.de</span>
                     </a>
                 </div>
             </li>
@@ -76,7 +76,7 @@
         <a href="index.html" class="brand-link">
             <img src="dist/img/logo.jpg" alt="ssm-cluster Logo" class="brand-image img-circle elevation-3"
                  style="opacity: .8">
-            <span class="brand-text font-weight-light">lou.springboot</span>
+            <span class="brand-text font-weight-light">PDMS</span>
         </a>
 
         <!-- Sidebar -->
@@ -87,7 +87,7 @@
                     <img src="dist/img/logo3.jpg" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="#" class="d-block">十三</a>
+                    <a href="#" class="d-block">mustermann</a>
                 </div>
             </div>
 
@@ -110,7 +110,7 @@
                             <li class="nav-item">
                                 <a href="./index.html" class="nav-link active">
                                     <i class="fa fa-circle-o nav-icon"></i>
-                                    <p>lou.springboot主页</p>
+                                    <p>hompage of PDMS</p>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -121,12 +121,12 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-header">管理模块</li>
+                    <li class="nav-header">Control module</li>
                     <li class="nav-item">
                         <a href="article.html" class="nav-link">
                             <i class="nav-icon fa fa-edit"></i>
                             <p>
-                                富文本管理
+                                KindEditor
                             </p>
                         </a>
                     </li>
@@ -134,14 +134,14 @@
                         <a href="picture.html" class="nav-link">
                             <i class="nav-icon fa fa-image"></i>
                             <p>
-                                图片管理
+                                PhotoUploader
                             </p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="user.html" class="nav-link active">
                             <i class="fa fa-user-circle nav-icon"></i>
-                            <p>用户管理</p>
+                            <p>UserPanel</p>
                         </a>
                     </li>
                 </ul>
@@ -158,12 +158,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">用户管理页</h1>
+                        <h1 class="m-0 text-dark">UserPanel</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="index.html">主页</a></li>
-                            <li class="breadcrumb-item active">用户管理页</li>
+                            <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
+                            <li class="breadcrumb-item active">UserPanel</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -178,10 +178,10 @@
                         <div class="card-body">
                             <div class="grid-btn">
                                 <button class="btn btn-info" onclick="userAdd()"><i
-                                        class="fa fa-plus"></i>&nbsp;新增
+                                        class="fa fa-plus"></i>&nbsp;add
                                 </button>
                                 <button class="btn btn-warning" onclick="userEdit()"><i
-                                        class="fa fa-edit"></i>&nbsp;编辑
+                                        class="fa fa-edit"></i>&nbsp;edit
                                 </button>
                             </div>
                             <table id="jqGrid" class="table table-bordered">
@@ -202,26 +202,26 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
-                        <h6 class="modal-title" id="modalAddTitle">用户添加</h6>
+                        <h6 class="modal-title" id="modalAddTitle">addUser</h6>
                     </div>
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <div class="alert alert-danger add-error-info">错误信息展示栏。</div>
+                                <div class="alert alert-danger add-error-info">error info</div>
                             </div>
                             <div class="form-group">
-                                <label for="userName" class="control-label">用户名:</label>
+                                <label for="userName" class="control-label">user:</label>
                                 <input type="text" class="form-control" id="userName">
                             </div>
                             <div class="form-group">
-                                <label for="password" class="control-label">密码:</label>
+                                <label for="password" class="control-label">password:</label>
                                 <input type="text" class="form-control" id="password">
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                        <button type="button" class="btn btn-primary" id="saveButton">确认</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
+                        <button type="button" class="btn btn-primary" id="saveButton">confirm</button>
                     </div>
                 </div>
             </div>
@@ -237,23 +237,23 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
-                        <h6 class="modal-title" id="modalEditTitle">密码编辑</h6>
+                        <h6 class="modal-title" id="modalEditTitle">change password</h6>
                     </div>
                     <div class="modal-body">
                         <form>
                             <input type="hidden" id="userId" value="0">
                             <div class="form-group">
-                                <div class="alert alert-danger edit-error-info">错误信息展示栏。</div>
+                                <div class="alert alert-danger edit-error-info">error info</div>
                             </div>
                             <div class="form-group">
-                                <label for="passwordEdit" class="control-label">新密码:</label>
+                                <label for="passwordEdit" class="control-label">new password:</label>
                                 <input type="text" class="form-control" id="passwordEdit">
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                        <button type="button" class="btn btn-primary" id="editButton">确认</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
+                        <button type="button" class="btn btn-primary" id="editButton">confirm</button>
                     </div>
                 </div>
             </div>
@@ -263,10 +263,10 @@
 
     <!-- /.content-wrapper -->
     <footer class="main-footer">
-        <strong>Copyright &copy; 2019 <a href="##">13blog.site</a>.</strong>
+        <strong>Copyright &copy; 2019 <a href="##">powered by cs faculty of tu dortmund</a>.</strong>
         All rights reserved.
         <div class="float-right d-none d-sm-inline-block">
-            <b>Version</b> 2.0
+            <b>Version</b> 1.0
         </div>
     </footer>
 

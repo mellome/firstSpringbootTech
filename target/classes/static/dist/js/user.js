@@ -15,14 +15,14 @@ $(function () {
         datatype: "json",
         colModel: [
             {label: 'id', name: 'id', index: 'id', width: 50, hidden: true, key: true},
-            {label: '登录名', name: 'userName', index: 'userName', sortable: false, width: 80},
-            {label: '添加时间', name: 'createTime', index: 'createTime', sortable: false, width: 80}
+            {label: 'userName', name: 'userName', index: 'userName', sortable: false, width: 80},
+            {label: 'createTime', name: 'createTime', index: 'createTime', sortable: false, width: 80}
         ],
         height: 485,
         rowNum: 10,
         rowList: [10, 30, 50],
         styleUI: 'Bootstrap',
-        loadtext: '信息读取中...',
+        loadtext: 'loading...',
         rownumbers: true,
         rownumWidth: 35,
         autowidth: true,
@@ -52,7 +52,7 @@ $(function () {
 
 function userAdd() {
     reset();
-    $('#modalAddTitle').html('用户添加');
+    $('#modalAddTitle').html('addUser');
     $('#modalAdd').modal('show');
 }
 
@@ -66,7 +66,7 @@ function userEdit() {
 
     $('#userId').val(id);
 
-    $('#modalEditTitle').html('密码编辑');
+    $('#modalEditTitle').html('passwordEdit');
     $('#modalEdit').modal('show');
 }
 
@@ -101,7 +101,7 @@ function userDel() {
                 success: function (r) {
                     checkResultCode(r.resultCode);
                     if (r.resultCode == 200) {
-                        swal("删除成功", {
+                        swal("deleted successfully", {
                             icon: "success",
                         });
                         $("#jqGrid").trigger("reloadGrid");
@@ -140,7 +140,7 @@ $('#saveButton').click(function () {
                 console.log(result);//打印服务端返回的数据
                 checkResultCode(result.resultCode);
                 if (result.resultCode == 200) {
-                    swal("保存成功", {
+                    swal("saved successfully", {
                         icon: "success",
                     });
                     $('#modalAdd').modal('hide');
@@ -156,7 +156,7 @@ $('#saveButton').click(function () {
             },
             error: function () {
                 reset();
-                swal("操作失败", {
+                swal("operation failed", {
                     icon: "error",
                 });
             }
