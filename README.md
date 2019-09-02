@@ -6,16 +6,16 @@
 ![](https://github.com/mellome/MarkdownPhotos/blob/master/firstSpringbootTech/loginSeite.png)
 
 ## Home page
-![](https://github.com/mellome/MarkdownPhotos/blob/master/firstSpringbootTech/loginSeite.png)
+![](https://github.com/mellome/MarkdownPhotos/blob/master/firstSpringbootTech/homePage.png)
 
 ## User page
-![](https://github.com/mellome/MarkdownPhotos/blob/master/firstSpringbootTech/loginSeite.png)
+![](https://github.com/mellome/MarkdownPhotos/blob/master/firstSpringbootTech/userPanel.png)
 
 ## Article page
-![](https://github.com/mellome/MarkdownPhotos/blob/master/firstSpringbootTech/loginSeite.png)
+![](https://github.com/mellome/MarkdownPhotos/blob/master/firstSpringbootTech/kindEditor.png)
 
 ## picture page
-![](https://github.com/mellome/MarkdownPhotos/blob/master/firstSpringbootTech/loginSeite.png)
+![](https://github.com/mellome/MarkdownPhotos/blob/master/firstSpringbootTech/uploader.png)
 
 ---
 

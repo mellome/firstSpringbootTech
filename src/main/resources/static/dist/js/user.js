@@ -81,8 +81,8 @@ function userDel() {
     }
     // 2.弹框确认
     swal({
-        title: "确认弹框",
-        text: "确认要删除数据吗?",
+        title: "confirm",
+        text: "ensure to delete?",
         icon: "warning",
         buttons: true,
         dangerMode: true,
@@ -187,7 +187,7 @@ $('#editButton').click(function () {
                 checkResultCode(result.resultCode);
                 console.log(result);//打印服务端返回的数据
                 if (result.resultCode == 200) {
-                    swal("修改成功", {
+                    swal("changed successfully", {
                         icon: "success",
                     });
                     $('#modalEdit').modal('hide');
@@ -219,20 +219,20 @@ $('#editButton').click(function () {
 function validObjectForAdd() {
     var userName = $('#userName').val();
     if (isNull(userName)) {
-        showErrorInfo("用户名不能为空!");
+        showErrorInfo("username can't be empty!");
         return false;
     }
     if (!validUserName(userName)) {
-        showErrorInfo("请输入符合规范的用户名!");
+        showErrorInfo("Please enter the username that meets the specifications!");
         return false;
     }
     var password = $('#password').val();
     if (isNull(password)) {
-        showErrorInfo("密码不能为空!");
+        showErrorInfo("password can't be empty!");
         return false;
     }
     if (!validPassword(password)) {
-        showErrorInfo("请输入符合规范的密码!");
+        showErrorInfo("Please enter the password that meets the specifications!");
         return false;
     }
     return true;
@@ -244,16 +244,16 @@ function validObjectForAdd() {
 function validObjectForEdit() {
     var userId = $('#userId').val();
     if (isNull(userId) || userId < 1) {
-        showErrorInfo("数据错误！");
+        showErrorInfo("data error！");
         return false;
     }
     var password = $('#passwordEdit').val();
     if (isNull(password)) {
-        showErrorInfo("密码不能为空!");
+        showErrorInfo("password can't be empty!");
         return false;
     }
     if (!validPassword(password)) {
-        showErrorInfo("请输入符合规范的密码!");
+        showErrorInfo("Please enter the password that meets the specifications!");
         return false;
     }
     return true;

@@ -152,7 +152,7 @@ function delCookie(name) {
  */
 function checkCookie() {
     if (getCookie("token") == null) {
-        swal("未登录", {
+        swal("Not logged in", {
             icon: "error",
         });
         window.location.href = "login.html";
@@ -184,12 +184,12 @@ function getSelectedRow() {
     var grid = $("#jqGrid");
     var rowKey = grid.getGridParam("selrow");
     if (!rowKey) {
-        alert("请选择一条记录");
+        alert("Please select a record");
         return;
     }
     var selectedIDs = grid.getGridParam("selarrrow");
     if (selectedIDs.length > 1) {
-        alert("只能选择一条记录");
+        alert("Can only select one record");
         return;
     }
     return selectedIDs[0];
@@ -203,7 +203,7 @@ function getSelectedRows() {
     var grid = $("#jqGrid");
     var rowKey = grid.getGridParam("selrow");
     if (!rowKey) {
-        alert("请选择一条记录");
+        alert("Please select a record");
         return;
     }
     return grid.getGridParam("selarrrow");
