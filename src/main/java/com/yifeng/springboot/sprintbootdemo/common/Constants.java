@@ -9,6 +9,6 @@ public class Constants {
     public static final int RESULT_CODE_SERVER_ERROR = 500;  // 服务器错误
 
     public final static String FILE_PRE_URL = "http://localhost:8082";//上传文件的默认url前缀，根据部署设置自行修改
-    public final static String FILE_UPLOAD_PATH = "/Users/mellome1992/LocalRepository/firstSpringBootTech/uploads/";//上传文件的保存地址，根据部署设置自行修改
+    public final static String FILE_UPLOAD_PATH = "/Users/mellome1992/Documents/LocalRepository/firstSpringBootTech/uploads/";//上传文件的保存地址，根据部署设置自行修改
 }
 

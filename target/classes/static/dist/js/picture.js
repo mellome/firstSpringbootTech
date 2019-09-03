@@ -45,7 +45,7 @@ $(function () {
     });
 
     function imgFormatter(cellvalue) {
-        return "<a href='" + cellvalue + "'> <img src='" + cellvalue + "' height=\"120\" width=\"135\" alt='lou.springboot'/></a>";
+        return "<a href='" + cellvalue + "'> <img src='" + cellvalue + "' height=\"120\" width=\"135\" alt='pic'/></a>";
     }
 
     new AjaxUpload('#upload', {
@@ -55,7 +55,7 @@ $(function () {
         responseType: "json",
         onSubmit: function (file, extension) {
             if (!(extension && /^(jpg|jpeg|png|gif)$/.test(extension.toLowerCase()))) {
-                swal('只支持jpg、png、gif格式的文件！', {
+                swal('only support pg, png, gif format！', {
                     icon: "error",
                 });
                 return false;
@@ -63,7 +63,7 @@ $(function () {
         },
         onComplete: function (file, r) {
             if (r.resultCode == 200) {
-                swal("上传成功", {
+                swal("uploaded successfully", {
                     icon: "success",
                 });
                 $("#picturePath").val(r.data);
@@ -181,20 +181,20 @@ function pictureEdit() {
 function validObject() {
     var picturePath = $('#picturePath').val();
     if (isNull(picturePath)) {
-        showErrorInfo("图片不能为空!");
+        showErrorInfo("photo can't be empty!");
         return false;
     }
     var pictureRemark = $('#pictureRemark').val();
     if (isNull(pictureRemark)) {
-        showErrorInfo("备注信息不能为空!");
+        showErrorInfo("remark infos can't be empty!");
         return false;
     }
     if (!validLength(pictureRemark, 150)) {
-        showErrorInfo("备注信息长度不能大于150!");
+        showErrorInfo("remark character cannot be greater than 150!");
         return false;
     }
     if (!validLength(picturePath, 120)) {
-        showErrorInfo("图片上传有误!");
+        showErrorInfo("upload error!");
         return false;
     }
     return true;
@@ -219,7 +219,7 @@ function deletePicture() {
         return;
     }
     swal({
-        title: "确认弹框",
+        title: "confirmation",
         text: "are you sure to delete?",
         icon: "warning",
         buttons: true,

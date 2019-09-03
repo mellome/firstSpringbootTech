@@ -27,7 +27,7 @@ public class PictureController {
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public Result list(@RequestParam Map<String, Object> params) {
         if (StringUtils.isEmpty(params.get("page")) || StringUtils.isEmpty(params.get("limit"))) {
-            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "参数异常！");
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "parameter exception！");
         }
         //查询列表数据
         PageUtil pageUtil = new PageUtil(params);
@@ -40,14 +40,14 @@ public class PictureController {
     @RequestMapping(value = "/info/{id}", method = RequestMethod.GET)
     public Result info(@PathVariable("id") Integer id, @TokenToUser AdminUser loginUser) {
         if (loginUser == null) {
-            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_NOT_LOGIN, "未登录！");
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_NOT_LOGIN, "not log in！");
         }
         if (id < 1) {
-            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "参数异常！");
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "parameter exception！");
         }
         Picture picture = pictureService.queryObject(id);
         if (picture == null) {
-            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "参数异常！");
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "parameter exception！");
         }
         return ResultGenerator.genSuccessResult(picture);
     }
@@ -58,15 +58,15 @@ public class PictureController {
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public Result save(@RequestBody Picture picture, @TokenToUser AdminUser loginUser) {
         if (loginUser == null) {
-            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_NOT_LOGIN, "未登录！");
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_NOT_LOGIN, "not log in！");
         }
         if (StringUtils.isEmpty(picture.getPath()) || StringUtils.isEmpty(picture.getRemark())) {
-            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "参数异常！");
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "parameter exception！");
         }
         if (pictureService.save(picture) > 0) {
             return ResultGenerator.genSuccessResult();
         } else {
-            return ResultGenerator.genFailResult("添加失败");
+            return ResultGenerator.genFailResult("added failed");
         }
     }
 
@@ -76,19 +76,19 @@ public class PictureController {
     @RequestMapping(value = "/update", method = RequestMethod.PUT)
     public Result update(@RequestBody Picture picture, @TokenToUser AdminUser loginUser) {
         if (loginUser == null) {
-            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_NOT_LOGIN, "未登录！");
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_NOT_LOGIN, "not log in！");
         }
         if (null == picture.getId() || StringUtils.isEmpty(picture.getPath()) || StringUtils.isEmpty(picture.getRemark())) {
-            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "参数异常！");
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "parameter exception！");
         }
         Picture tempPicture = pictureService.queryObject(picture.getId());
         if (tempPicture == null) {
-            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "参数异常！");
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "parameter exception！");
         }
         if (pictureService.update(picture) > 0) {
             return ResultGenerator.genSuccessResult();
         } else {
-            return ResultGenerator.genFailResult("修改失败");
+            return ResultGenerator.genFailResult("changed failed");
         }
     }
 
@@ -98,15 +98,15 @@ public class PictureController {
     @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
     public Result delete(@RequestBody Integer[] ids, @TokenToUser AdminUser loginUser) {
         if (loginUser == null) {
-            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_NOT_LOGIN, "未登录！");
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_NOT_LOGIN, "not log in！");
         }
         if (ids.length < 1) {
-            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "参数异常！");
+            return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "parameter exception！");
         }
         if (pictureService.deleteBatch(ids) > 0) {
             return ResultGenerator.genSuccessResult();
         } else {
-            return ResultGenerator.genFailResult("删除失败");
+            return ResultGenerator.genFailResult("deleted failed");
         }
     }
 

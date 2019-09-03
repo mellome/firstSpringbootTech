@@ -16,7 +16,7 @@ public class SpringBootWebMvcConfigurer implements WebMvcConfigurer {
     private TokenToUserMethodArgumentResolver tokenToUserMethodArgumentResolver;
 
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/files/**").addResourceLocations("file:/Users/mellome1992/LocalRepository/firstSpringBootTech/uploads/");
+        registry.addResourceHandler("/files/**").addResourceLocations("file:/Users/mellome1992/Documents/LocalRepository/firstSpringBootTech/uploads/");
     }
 
     /**
