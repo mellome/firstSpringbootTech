@@ -23,7 +23,7 @@ $(function () {
     });
 
     $('#articleModal').on('hidden.bs.modal', function () {
-        editor.html('请输入...');
+        editor.html('please enter...');
     })
 
     $('#articleModal').modal('hide');
@@ -160,29 +160,29 @@ function articleEdit() {
 function validObject() {
     var articleName = $('#articleName').val();
     if (isNull(articleName)) {
-        showErrorInfo("标题不能为空!");
+        showErrorInfo("title can't be empty!");
         return false;
     }
     if (!validLength(articleName, 120)) {
-        showErrorInfo("标题字符不能大于120!");
+        showErrorInfo("Title character cannot be greater than 120!");
         return false;
     }
     var articleAuthor = $('#articleAuthor').val();
     if (isNull(articleAuthor)) {
-        showErrorInfo("作者不能为空!");
+        showErrorInfo("author name can't be empty!");
         return false;
     }
     if (!validLength(articleAuthor, 10)) {
-        showErrorInfo("作者字符不能大于10!");
+        showErrorInfo("author character cannot be greater than 10!");
         return false;
     }
     var ariticleContent = editor.html();
-    if (isNull(ariticleContent) || ariticleContent == '请输入...') {
-        showErrorInfo("内容不能为空!");
+    if (isNull(ariticleContent) || ariticleContent == 'please enter...') {
+        showErrorInfo("content can't be empty!");
         return false;
     }
     if (!validLength(ariticleContent, 8000)) {
-        showErrorInfo("内容字符不能大于8000!");
+        showErrorInfo("content character cannot be greater than 8000!");
         return false;
     }
     return true;
@@ -207,7 +207,7 @@ function deleteArticle() {
         return;
     }
     swal({
-        title: "确认弹框",
+        title: "confirmation",
         text: "are you sure to delete?",
         icon: "warning",
         buttons: true,
