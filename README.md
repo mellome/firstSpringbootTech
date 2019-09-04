@@ -21,8 +21,10 @@
 
 
 ## Environment
-![](https://img.shields.io/badge/java-1.8%2B-green) ![](https://img.shields.io/badge/maven-3.0%2B-green) ![](https://img.shields.io/badge/springBoot-5.1.9%2B-green)
-![](https://img.shields.io/badge/myBatis-1.3.2-green)
+![](https://img.shields.io/badge/java-1.8%2B-green) 
+![](https://img.shields.io/badge/maven-3.0%2B-green) 
+![](https://img.shields.io/badge/springBoot-5.1.9%2B-green)
+![](https://img.shields.io/badge/myBatis-1.3.2%2B-green)
 
 ## Getting Started 
 ```
