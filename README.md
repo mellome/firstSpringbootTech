@@ -1,6 +1,6 @@
 # Personal Data Management System (PDMS)
 
-> This project is to use the administrator account to log into PDMS to manage user account information in the database. Administrator can add, edit, delete users and can also add photos and rich text.
+> This project is to use the administrator account to log into PDMS to manage user account information in the database. Administrator can `add`, `edit`, `delete` users and can also `add photos` and `rich text`.
 
 ## Login page
 ![](https://github.com/mellome/MarkdownPhotos/blob/master/firstSpringbootTech/loginSeite.png)
@@ -14,13 +14,17 @@
 ## Article page
 ![](https://github.com/mellome/MarkdownPhotos/blob/master/firstSpringbootTech/kindEditor.png)
 
-## picture page
+## Picture page
 ![](https://github.com/mellome/MarkdownPhotos/blob/master/firstSpringbootTech/uploader.png)
 
 ---
 
-## Getting Started 
 
+## Environment
+![](https://img.shields.io/badge/java-1.8%2B-green) ![](https://img.shields.io/badge/maven-3.0%2B-green) ![](https://img.shields.io/badge/springBoot-5.1.9%2B-green)
+![](https://img.shields.io/badge/myBatis-1.3.2-green)
+
+## Getting Started 
 ```
 cd /firstSpringbootTech
 

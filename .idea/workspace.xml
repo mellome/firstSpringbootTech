@@ -3,31 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cab70375-3b5e-43cb-a646-0359a000d571" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/common/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/config/SpringBootWebMvcConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/config/SpringBootWebMvcConfigurer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/PictureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yifeng/springboot/sprintbootdemo/controller/PictureController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/logo3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/wxpay.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/zhifubao1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/picture.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/picture.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/picture.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/picture.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yifeng/springboot/sprintbootdemo/common/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yifeng/springboot/sprintbootdemo/common/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yifeng/springboot/sprintbootdemo/config/SpringBootWebMvcConfigurer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yifeng/springboot/sprintbootdemo/config/SpringBootWebMvcConfigurer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yifeng/springboot/sprintbootdemo/controller/PictureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yifeng/springboot/sprintbootdemo/controller/PictureController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yifeng/springboot/sprintbootdemo/controller/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yifeng/springboot/sprintbootdemo/controller/UploadController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/img/logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/img/logo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/img/logo3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/img/logo3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/picture.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/js/picture.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/picture.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/picture.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/20190825_22121687.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/20190902_23371012.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +146,8 @@
       <workItem from="1567456403709" duration="29000" />
       <workItem from="1567456460101" duration="1178000" />
       <workItem from="1567492505521" duration="7896000" />
-      <workItem from="1567525139435" duration="2908000" />
+      <workItem from="1567525139435" duration="3080000" />
+      <workItem from="1567578350942" duration="278000" />
     </task>
     <servers />
   </component>
