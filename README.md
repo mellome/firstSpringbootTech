@@ -3,19 +3,19 @@
 > This project is to use the administrator account to log into PDMS to manage user account information in the database. Administrator can `add`, `edit`, `delete` users and can also `add photos` and `rich text`.
 
 ## Login page
-![](https://github.com/mellome/MarkdownPhotos/blob/master/firstSpringbootTech/loginSeite.png)
+![](https://github.com/mellome/MarkdownPhotos/raw/master/firstSpringbootTech/loginSeite.png)
 
 ## Home page
-![](https://github.com/mellome/MarkdownPhotos/blob/master/firstSpringbootTech/homePage.png)
+![](https://github.com/mellome/MarkdownPhotos/raw/master/firstSpringbootTech/homePage.png)
 
 ## User page
-![](https://github.com/mellome/MarkdownPhotos/blob/master/firstSpringbootTech/userPanel.png)
+![](https://github.com/mellome/MarkdownPhotos/raw/master/firstSpringbootTech/userPanel.png)
 
 ## Article page
-![](https://github.com/mellome/MarkdownPhotos/blob/master/firstSpringbootTech/kindEditor.png)
+![](https://github.com/mellome/MarkdownPhotos/raw/master/firstSpringbootTech/kindEditor.png)
 
 ## Picture page
-![](https://github.com/mellome/MarkdownPhotos/blob/master/firstSpringbootTech/uploader.png)
+![](https://github.com/mellome/MarkdownPhotos/raw/master/firstSpringbootTech/uploader.png)
 
 ---
 
