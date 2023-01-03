@@ -1,4 +1,4 @@
-# Personal Data Management System (PDMS)
+# Personal Data Management Portal (PDMP)
 
 > This project is to use the administrator account to log into PDMS to manage user account information in the database. Administrator can `add`, `edit`, `delete` users and can also `add photos` and `rich text`.
 
